@@ -7,25 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04CC6EDD2B4D26C900C6815F /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 04CC6EDC2B4D26C900C6815F /* IQKeyboardManagerSwift */; };
 		04FDB4252B4D0A28002F1496 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDB4242B4D0A28002F1496 /* AppDelegate.swift */; };
 		04FDB4272B4D0A28002F1496 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDB4262B4D0A28002F1496 /* SceneDelegate.swift */; };
-		04FDB4292B4D0A28002F1496 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDB4282B4D0A28002F1496 /* ViewController.swift */; };
 		04FDB42C2B4D0A28002F1496 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FDB42A2B4D0A28002F1496 /* Main.storyboard */; };
 		04FDB42F2B4D0A28002F1496 /* CRUDCoreDataSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04FDB42D2B4D0A28002F1496 /* CRUDCoreDataSwift.xcdatamodeld */; };
 		04FDB4312B4D0A2A002F1496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FDB4302B4D0A2A002F1496 /* Assets.xcassets */; };
 		04FDB4342B4D0A2A002F1496 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FDB4322B4D0A2A002F1496 /* LaunchScreen.storyboard */; };
+		04FDB4412B4D0BC4002F1496 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDB4402B4D0BC4002F1496 /* DBHelper.swift */; };
+		04FDB4472B4D0D51002F1496 /* UserModelSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDB4462B4D0D51002F1496 /* UserModelSwift.swift */; };
+		04FDB44A2B4D0D6E002F1496 /* UserTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDB4482B4D0D6D002F1496 /* UserTVC.swift */; };
+		04FDB44B2B4D0D6E002F1496 /* UserTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FDB4492B4D0D6E002F1496 /* UserTVC.xib */; };
+		04FDB44D2B4D0D87002F1496 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDB44C2B4D0D87002F1496 /* RegisterVC.swift */; };
+		04FDB44F2B4D0D93002F1496 /* UserListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDB44E2B4D0D93002F1496 /* UserListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04FDB4212B4D0A28002F1496 /* CRUDCoreDataSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRUDCoreDataSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FDB4242B4D0A28002F1496 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04FDB4262B4D0A28002F1496 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04FDB4282B4D0A28002F1496 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04FDB42B2B4D0A28002F1496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04FDB42E2B4D0A28002F1496 /* CRUDCoreDataSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CRUDCoreDataSwift.xcdatamodel; sourceTree = "<group>"; };
 		04FDB4302B4D0A2A002F1496 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04FDB4332B4D0A2A002F1496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04FDB4352B4D0A2A002F1496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04FDB4402B4D0BC4002F1496 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		04FDB4462B4D0D51002F1496 /* UserModelSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelSwift.swift; sourceTree = "<group>"; };
+		04FDB4482B4D0D6D002F1496 /* UserTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = UserTVC.swift; sourceTree = "<group>"; };
+		04FDB4492B4D0D6E002F1496 /* UserTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserTVC.xib; sourceTree = "<group>"; };
+		04FDB44C2B4D0D87002F1496 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		04FDB44E2B4D0D93002F1496 /* UserListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CC6EDD2B4D26C900C6815F /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,16 +70,93 @@
 		04FDB4232B4D0A28002F1496 /* CRUDCoreDataSwift */ = {
 			isa = PBXGroup;
 			children = (
-				04FDB4242B4D0A28002F1496 /* AppDelegate.swift */,
-				04FDB4262B4D0A28002F1496 /* SceneDelegate.swift */,
-				04FDB4282B4D0A28002F1496 /* ViewController.swift */,
-				04FDB42A2B4D0A28002F1496 /* Main.storyboard */,
-				04FDB4302B4D0A2A002F1496 /* Assets.xcassets */,
-				04FDB4322B4D0A2A002F1496 /* LaunchScreen.storyboard */,
+				04FDB43B2B4D0AB9002F1496 /* Application */,
+				04FDB43C2B4D0ABF002F1496 /* Database */,
+				04FDB43D2B4D0AC9002F1496 /* Screen */,
+				04FDB43E2B4D0ACE002F1496 /* Storyboard */,
+				04FDB43F2B4D0AD5002F1496 /* Resources */,
 				04FDB4352B4D0A2A002F1496 /* Info.plist */,
-				04FDB42D2B4D0A28002F1496 /* CRUDCoreDataSwift.xcdatamodeld */,
 			);
 			path = CRUDCoreDataSwift;
+			sourceTree = "<group>";
+		};
+		04FDB43B2B4D0AB9002F1496 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				04FDB4242B4D0A28002F1496 /* AppDelegate.swift */,
+				04FDB4262B4D0A28002F1496 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		04FDB43C2B4D0ABF002F1496 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				04FDB42D2B4D0A28002F1496 /* CRUDCoreDataSwift.xcdatamodeld */,
+				04FDB4402B4D0BC4002F1496 /* DBHelper.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		04FDB43D2B4D0AC9002F1496 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				04FDB4422B4D0D2D002F1496 /* User */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		04FDB43E2B4D0ACE002F1496 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				04FDB42A2B4D0A28002F1496 /* Main.storyboard */,
+				04FDB4322B4D0A2A002F1496 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		04FDB43F2B4D0AD5002F1496 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04FDB4302B4D0A2A002F1496 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		04FDB4422B4D0D2D002F1496 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				04FDB4452B4D0D3F002F1496 /* Model */,
+				04FDB4442B4D0D3B002F1496 /* View */,
+				04FDB4432B4D0D37002F1496 /* Controller */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		04FDB4432B4D0D37002F1496 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04FDB44E2B4D0D93002F1496 /* UserListVC.swift */,
+				04FDB44C2B4D0D87002F1496 /* RegisterVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04FDB4442B4D0D3B002F1496 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04FDB4482B4D0D6D002F1496 /* UserTVC.swift */,
+				04FDB4492B4D0D6E002F1496 /* UserTVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04FDB4452B4D0D3F002F1496 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04FDB4462B4D0D51002F1496 /* UserModelSwift.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +175,9 @@
 			dependencies = (
 			);
 			name = CRUDCoreDataSwift;
+			packageProductDependencies = (
+				04CC6EDC2B4D26C900C6815F /* IQKeyboardManagerSwift */,
+			);
 			productName = CRUDCoreDataSwift;
 			productReference = 04FDB4212B4D0A28002F1496 /* CRUDCoreDataSwift.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +206,9 @@
 				Base,
 			);
 			mainGroup = 04FDB4182B4D0A28002F1496;
+			packageReferences = (
+				04CC6EDB2B4D26C900C6815F /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 04FDB4222B4D0A28002F1496 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FDB44B2B4D0D6E002F1496 /* UserTVC.xib in Resources */,
 				04FDB4342B4D0A2A002F1496 /* LaunchScreen.storyboard in Resources */,
 				04FDB4312B4D0A2A002F1496 /* Assets.xcassets in Resources */,
 				04FDB42C2B4D0A28002F1496 /* Main.storyboard in Resources */,
@@ -142,9 +238,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				04FDB42F2B4D0A28002F1496 /* CRUDCoreDataSwift.xcdatamodeld in Sources */,
-				04FDB4292B4D0A28002F1496 /* ViewController.swift in Sources */,
 				04FDB4252B4D0A28002F1496 /* AppDelegate.swift in Sources */,
+				04FDB44A2B4D0D6E002F1496 /* UserTVC.swift in Sources */,
 				04FDB4272B4D0A28002F1496 /* SceneDelegate.swift in Sources */,
+				04FDB44D2B4D0D87002F1496 /* RegisterVC.swift in Sources */,
+				04FDB4472B4D0D51002F1496 /* UserModelSwift.swift in Sources */,
+				04FDB4412B4D0BC4002F1496 /* DBHelper.swift in Sources */,
+				04FDB44F2B4D0D93002F1496 /* UserListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +467,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04CC6EDB2B4D26C900C6815F /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.16;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04CC6EDC2B4D26C900C6815F /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04CC6EDB2B4D26C900C6815F /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		04FDB42D2B4D0A28002F1496 /* CRUDCoreDataSwift.xcdatamodeld */ = {

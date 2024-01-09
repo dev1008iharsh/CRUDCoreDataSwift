@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.toolbarTintColor = .label
+        print("** Database Path :", URL.documentsDirectory)
+        // database jova mte link slect kari last show in finer kari ane ema library ni andar application supoort folder hase...ema db ni file hase ene db browser ma open karvani
         return true
     }
 
