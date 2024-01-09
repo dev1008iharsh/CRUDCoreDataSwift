@@ -14,7 +14,7 @@
 		04FDB42F2B4D0A28002F1496 /* CRUDCoreDataSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04FDB42D2B4D0A28002F1496 /* CRUDCoreDataSwift.xcdatamodeld */; };
 		04FDB4312B4D0A2A002F1496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FDB4302B4D0A2A002F1496 /* Assets.xcassets */; };
 		04FDB4342B4D0A2A002F1496 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FDB4322B4D0A2A002F1496 /* LaunchScreen.storyboard */; };
-		04FDB4412B4D0BC4002F1496 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDB4402B4D0BC4002F1496 /* DBHelper.swift */; };
+		04FDB4412B4D0BC4002F1496 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDB4402B4D0BC4002F1496 /* DataBaseManager.swift */; };
 		04FDB4472B4D0D51002F1496 /* UserModelSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDB4462B4D0D51002F1496 /* UserModelSwift.swift */; };
 		04FDB44A2B4D0D6E002F1496 /* UserTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDB4482B4D0D6D002F1496 /* UserTVC.swift */; };
 		04FDB44B2B4D0D6E002F1496 /* UserTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FDB4492B4D0D6E002F1496 /* UserTVC.xib */; };
@@ -31,7 +31,7 @@
 		04FDB4302B4D0A2A002F1496 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04FDB4332B4D0A2A002F1496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04FDB4352B4D0A2A002F1496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04FDB4402B4D0BC4002F1496 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		04FDB4402B4D0BC4002F1496 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 		04FDB4462B4D0D51002F1496 /* UserModelSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelSwift.swift; sourceTree = "<group>"; };
 		04FDB4482B4D0D6D002F1496 /* UserTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = UserTVC.swift; sourceTree = "<group>"; };
 		04FDB4492B4D0D6E002F1496 /* UserTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserTVC.xib; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				04FDB42D2B4D0A28002F1496 /* CRUDCoreDataSwift.xcdatamodeld */,
-				04FDB4402B4D0BC4002F1496 /* DBHelper.swift */,
+				04FDB4402B4D0BC4002F1496 /* DataBaseManager.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -243,7 +243,7 @@
 				04FDB4272B4D0A28002F1496 /* SceneDelegate.swift in Sources */,
 				04FDB44D2B4D0D87002F1496 /* RegisterVC.swift in Sources */,
 				04FDB4472B4D0D51002F1496 /* UserModelSwift.swift in Sources */,
-				04FDB4412B4D0BC4002F1496 /* DBHelper.swift in Sources */,
+				04FDB4412B4D0BC4002F1496 /* DataBaseManager.swift in Sources */,
 				04FDB44F2B4D0D93002F1496 /* UserListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

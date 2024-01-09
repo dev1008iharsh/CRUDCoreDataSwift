@@ -9,11 +9,11 @@ import UIKit
 
 class UserTVC: UITableViewCell {
 
-    @IBOutlet weak var fullNameLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var lblFullName: UILabel!
+    @IBOutlet weak var lblEmail: UILabel!
+    @IBOutlet weak var imgProfile: UIImageView!
 
-    var user: UserModelCoreData? {
+    var userModel: UserModelCoreData? {
         didSet { // Property Observer
             userConfiguration()
         }
@@ -21,7 +21,7 @@ class UserTVC: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        profileImageView.layer.cornerRadius = profileImageView.frame.size.height / 2
+        imgProfile.layer.cornerRadius = imgProfile.frame.size.height / 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -31,12 +31,12 @@ class UserTVC: UITableViewCell {
     }
 
     func userConfiguration() {
-        guard let user else { return }
-        fullNameLabel.text = (user.firstName ?? "") + " " + (user.lastName ?? "") // title
-        emailLabel.text = "Email: \(user.email ?? "")" // subTitle
+        guard let userModel else { return }
+        lblFullName.text = (userModel.firstName ?? "") + " " + (userModel.lastName ?? "")
+        lblEmail.text = "Email: \(userModel.email ?? "")"
 
-        let imageURL = URL.documentsDirectory.appending(components: user.imageName ?? "").appendingPathExtension("png")
-        profileImageView.image = UIImage(contentsOfFile: imageURL.path)
+        let imageURL = URL.documentsDirectory.appending(components: userModel.imageName ?? "").appendingPathExtension("png")
+        imgProfile.image = UIImage(contentsOfFile: imageURL.path)
     }
     
 }

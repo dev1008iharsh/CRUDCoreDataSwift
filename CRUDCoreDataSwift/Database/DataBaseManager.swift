@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 import UIKit
 
-class DBHelper{
+class DataBaseManager{
     private var context: NSManagedObjectContext {
         return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     }
@@ -40,7 +40,7 @@ class DBHelper{
         do {
             users = try context.fetch(UserModelCoreData.fetchRequest())
         }catch {
-            print("Fetch user error", error)
+            print("*** Fetch user error", error)
         }
 
         return users
@@ -50,7 +50,7 @@ class DBHelper{
         do {
             try context.save() // aa karya vafar database ma save na thay
         }catch {
-            print("User saving error:", error)
+            print("*** User saving error", error)
         }
     }
 
@@ -59,7 +59,7 @@ class DBHelper{
         do {
             try FileManager.default.removeItem(at: imageURL)
         }catch {
-            print("remove image from DD", error)
+            print("remove image from Document Directory", error)
         }
         context.delete(userEntity)
         saveContext()

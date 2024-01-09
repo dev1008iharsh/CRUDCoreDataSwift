@@ -10,36 +10,49 @@ import PhotosUI
 
 class RegisterVC: UIViewController {
     
+    //MARK: -  @IBOutlet
     @IBOutlet weak var txtEmail: UITextField!
     
     @IBOutlet weak var btnRegister: UIButton!
+    
     @IBOutlet weak var txtPass: UITextField!
+    
     @IBOutlet weak var txtLastName: UITextField!
+    
     @IBOutlet weak var txtFirstName: UITextField!
+    
     @IBOutlet weak var imgUser: UIImageView!
     
     
-    private let manager =  DBHelper()
+    //MARK: -  Properties
+    private let manager =  DataBaseManager()
+    
     private var isImageSelected: Bool = false
     
-    var user: UserModelCoreData?
+    var userModel: UserModelCoreData?
     
+    
+    //MARK: -  ViewController LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
         setDataForUpdateScreen()
     }
+    
+    //MARK: - Helper Functions
    
     func setDataForUpdateScreen() {
-        if let user {
+        if let userModel {
             btnRegister.setTitle("Update", for: .normal)
             navigationItem.title = "Add New User"
-            txtFirstName.text = user.firstName
-            txtLastName.text = user.lastName
-            txtEmail.text = user.email
-            txtPass.text = user.password
+            
+            txtFirstName.text = userModel.firstName
+            txtLastName.text = userModel.lastName
+            txtEmail.text = userModel.email
+            txtPass.text = userModel.password
 
-            let imageURL = URL.documentsDirectory.appending(components: user.imageName ?? "").appendingPathExtension("png")
+           
+            let imageURL = URL.documentsDirectory.appending(components: userModel.imageName ?? "").appendingPathExtension("png")
             imgUser.image = UIImage(contentsOfFile: imageURL.path)
 
             isImageSelected = true
@@ -49,12 +62,8 @@ class RegisterVC: UIViewController {
             
         }
     }
-     
-    
-   
-  
+      
     func setUpUI(){
-       
         
          //adding gesture to image so that we can tap it
         let imageTap = UITapGestureRecognizer(target: self, action:  #selector(openGallery))
@@ -64,7 +73,29 @@ class RegisterVC: UIViewController {
         imgUser.layer.cornerRadius = imgUser.frame.size.height / 2
     }
     
+    func openValidationAlert(message: String){
+        let alertController = UIAlertController(title: "Required", message: message, preferredStyle: .alert)
+        let okay = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(okay)
+        present(alertController, animated: true)
+    }
     
+    
+    // save image to local storage - document directory
+    func saveImageToDocumentDirectory(imageName: String) {
+        let fileURL = URL.documentsDirectory.appending(components: imageName).appendingPathExtension("png")
+        if let data = imgUser.image?.pngData() {
+            do {
+                try data.write(to: fileURL) // Save
+            }catch {
+                print("** Error Save image document:", error)
+            }
+        }
+    }
+    
+    
+    
+    //MARK: -  Buttons Actions
     @objc func openGallery(){
         var config = PHPickerConfiguration()
         config.selectionLimit = 1 // 0 - Unlimited
@@ -100,7 +131,7 @@ class RegisterVC: UIViewController {
         }
         
         
-        if let user {
+        if let userModel {
           // Update User
 
             let newUser = UserModelSwift(
@@ -108,10 +139,10 @@ class RegisterVC: UIViewController {
                 lastName: lastName,
                 email: email,
                 password: password,
-                imageName: user.imageName ?? ""
+                imageName: userModel.imageName ?? ""
             )
 
-            manager.updateUser(user: newUser, userEntity: user)
+            manager.updateUser(user: newUser, userEntity: userModel)
             saveImageToDocumentDirectory(imageName: newUser.imageName)
         }else {
             
@@ -131,34 +162,15 @@ class RegisterVC: UIViewController {
         }
 
         navigationController?.popViewController(animated: true)
-
-        
+ 
     }
-    
-    func openValidationAlert(message: String){
-        let alertController = UIAlertController(title: "Required", message: message, preferredStyle: .alert)
-        let okay = UIAlertAction(title: "OK", style: .default)
-        alertController.addAction(okay)
-        present(alertController, animated: true)
-    }
-    
-    func saveImageToDocumentDirectory(imageName: String) {
-        let fileURL = URL.documentsDirectory.appending(components: imageName).appendingPathExtension("png")
-        if let data = imgUser.image?.pngData() {
-            do {
-                try data.write(to: fileURL) // Save
-            }catch {
-                print("** Error Save image document:", error)
-            }
-        }
-    }
-    
-   
-
+     
  
 }
 
 
+
+//MARK: -  PHPickerViewControllerDelegate
 // selecting image from gallary
 extension RegisterVC: PHPickerViewControllerDelegate {
 
