@@ -13,16 +13,7 @@ class DataBaseManager{
     private var context: NSManagedObjectContext {
         return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     }
-    
-    private func addUpdateUser(userEntity: UserModelCoreData, user: UserModelSwift) {
-        userEntity.firstName = user.firstName
-        userEntity.lastName = user.lastName
-        userEntity.email = user.email
-        userEntity.password = user.password
-        userEntity.imageName = user.imageName
-        saveContext()
-    }
-
+     
     func addUser(_ user: UserModelSwift) {
         let userEntity = UserModelCoreData(context: context) // navo user create kare
         addUpdateUser(userEntity: userEntity, user: user)
@@ -31,9 +22,16 @@ class DataBaseManager{
     func updateUser(user: UserModelSwift, userEntity: UserModelCoreData) {
         addUpdateUser(userEntity: userEntity, user: user)
     }
-
+     
+    private func addUpdateUser(userEntity: UserModelCoreData, user: UserModelSwift) {
+        userEntity.firstName = user.firstName
+        userEntity.lastName = user.lastName
+        userEntity.email = user.email
+        userEntity.password = user.password
+        userEntity.imageName = user.imageName
+        saveContext()
+    }
  
-    
     func fetchUsers() -> [UserModelCoreData] {
         var users: [UserModelCoreData] = []
 

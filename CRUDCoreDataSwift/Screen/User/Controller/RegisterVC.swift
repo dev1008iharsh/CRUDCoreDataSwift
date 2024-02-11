@@ -44,7 +44,7 @@ class RegisterVC: UIViewController {
     func setDataForUpdateScreen() {
         if let userModel {
             btnRegister.setTitle("Update", for: .normal)
-            navigationItem.title = "Add New User"
+            navigationItem.title = "Update New User"
             
             txtFirstName.text = userModel.firstName
             txtLastName.text = userModel.lastName
@@ -58,7 +58,7 @@ class RegisterVC: UIViewController {
             isImageSelected = true
         }else {
             btnRegister.setTitle("Register", for: .normal)
-            navigationItem.title = "Update existing User"
+            navigationItem.title = "Add existing User"
             
         }
     }
@@ -69,7 +69,7 @@ class RegisterVC: UIViewController {
         let imageTap = UITapGestureRecognizer(target: self, action:  #selector(openGallery))
         imgUser.isUserInteractionEnabled = true
         imgUser.addGestureRecognizer(imageTap)
-        
+        txtPass.delegate = self
         imgUser.layer.cornerRadius = imgUser.frame.size.height / 2
     }
     
@@ -106,6 +106,10 @@ class RegisterVC: UIViewController {
     }
     
     @IBAction func btnRegister(_ sender: Any) {
+        registerUser()
+    }
+     
+    func registerUser(){
         
         guard let firstName = txtFirstName.text, !firstName.isEmpty else {
             openValidationAlert(message: "Please enter your first name")
@@ -120,8 +124,8 @@ class RegisterVC: UIViewController {
             return
         }
 
-        guard let password = txtPass.text, !password.isEmpty else {
-            openValidationAlert(message: "Please enter your password")
+        guard let password = txtPass.text, !password.isEmpty, password.count < 8 else {
+            openValidationAlert(message: "Please enter your password and it should be greater than 8 character")
             return
         }
 
@@ -162,13 +166,20 @@ class RegisterVC: UIViewController {
         }
 
         navigationController?.popViewController(animated: true)
+        
+        
  
     }
-     
  
 }
 
-
+extension RegisterVC : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        registerUser()
+        return true
+    }
+}
+ 
 
 //MARK: -  PHPickerViewControllerDelegate
 // selecting image from gallary
